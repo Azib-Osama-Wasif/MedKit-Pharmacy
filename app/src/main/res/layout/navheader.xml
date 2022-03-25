@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/green">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="194dp"
+        android:src="@drawable/intrologo" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/white"
+    android:textStyle="bold"
+    android:paddingLeft="5dp"
+    android:text="Medkit Pharmacy"
+    android:textSize="30dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:paddingLeft="5dp"
+        android:text="A pharmacy for all your needs"
+        android:textSize="13dp"/>
+
+</LinearLayout>

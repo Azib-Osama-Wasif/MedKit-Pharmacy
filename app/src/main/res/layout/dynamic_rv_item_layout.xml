@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    android:elevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/img1"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/t1"
+            android:text="This is medicine"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_below="@+id/img1"
+            android:textSize="18dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/t2"
+            android:text="This is medicine Description"
+            android:textColor="@color/black"
+            android:layout_below="@+id/t1"
+            android:textSize="10dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/t3"
+            android:text="Rs.100"
+            android:textColor="@color/black"
+            android:layout_below="@+id/t2"
+            android:textSize="15dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cart"
+            android:layout_below="@+id/t2"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/cart_24"
+
+            />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
