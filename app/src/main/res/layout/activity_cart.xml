@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="0dp"
+    android:background="@color/white"
+    android:paddingBottom="10dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lower_rel"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        android:padding="10dp" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/progress"
+        style="@style/SpinKitView.Large.FadingCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/dark_green" />
+
+    <RelativeLayout
+        android:id="@+id/lower_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lighter_green"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            android:id="@+id/total_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:text="Total"
+            android:textColor="@color/dark_green"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/total_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="10dp"
+            android:text="0"
+            android:textColor="@color/dark_green"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/complete_sale_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_title"
+            android:background="@color/dark_green"
+            android:text="CLOSE"
+
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No records found."
+        android:textColor="@color/dark_green"
+        android:textSize="20sp"
+        android:visibility="invisible" />
+
+</RelativeLayout>

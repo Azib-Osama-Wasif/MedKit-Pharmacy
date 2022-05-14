@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progress"
+        style="@style/SpinKitView.Large.FadingCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        app:SpinKit_Color="@color/dark_green" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="40dp"
+                android:text="Edit Medicine"
+                android:textAlignment="center"
+                android:textColor="@color/dark_green"
+                android:textSize="31.3sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_below="@+id/linear"
+                android:layout_marginTop="20dp"
+                android:hint="Name"
+                android:textColorHint="@color/dark_green"
+                app:boxStrokeColor="@color/dark_green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameET"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:maxLength="30"
+                    android:textColor="@color/dark_green"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/price"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="10dp"
+                android:hint="Price"
+                android:textColorHint="@color/dark_green"
+                app:boxStrokeColor="@color/dark_green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/priceET"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="number"
+                    android:maxLength="30"
+                    android:textColor="@color/dark_green"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/address"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="10dp"
+                android:hint="Description"
+                android:textColorHint="@color/dark_green"
+                app:boxStrokeColor="@color/dark_green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/descriptionET"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:inputType="text"
+                    android:maxLength="300"
+                    android:textColor="@color/dark_green"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/type"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_below="@+id/product_category"
+                android:layout_marginTop="10dp"
+                android:hint="Type"
+                android:textColorHint="@color/dark_green"
+                app:boxStrokeColor="@color/dark_green">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/typeET"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:onClick="showTypePopup"
+                    android:textColor="@color/dark_green"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:maxLength="30">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/date"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_below="@+id/product_category"
+                android:layout_marginTop="10dp"
+                android:hint="Expiry Date"
+                android:textColorHint="@color/dark_green"
+                app:boxStrokeColor="@color/dark_green">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dateET"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textColor="@color/dark_green"
+                    android:maxLength="30">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/manufacturer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="10dp"
+                android:hint="Manufacturer"
+                android:textColorHint="@color/dark_green"
+                app:boxStrokeColor="@color/dark_green">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/manufacturerET"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="@color/dark_green"
+                    android:inputType="text"
+                    android:maxLength="300">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="20dp"
+                android:text="submit"
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

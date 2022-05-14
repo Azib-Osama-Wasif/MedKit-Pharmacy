@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/category_customer"
+        android:title="Customer"/>
+
+    <item
+        android:id="@+id/category_pharmacy"
+        android:title="Pharmacy"/>
+
+    <item
+        android:id="@+id/category_admin"
+        android:title="Admin"/>
+
+</menu>

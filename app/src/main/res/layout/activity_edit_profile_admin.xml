@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingHorizontal="15dp">
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/progress"
+        style="@style/SpinKitView.Large.FadingCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        app:SpinKit_Color="@color/dark_green" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textColor="@color/dark_green"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_marginVertical="30dp"/>
+
+    <LinearLayout
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tx_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            app:errorEnabled="true"
+            app:startIconDrawable="@drawable/ic_person"
+            app:startIconTint="@color/dark_green"
+            android:textColorHint="@color/dark_green">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="textCapWords"
+                android:textColor="@color/dark_green"
+                android:textColorHighlight="@color/dark_green">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tx_cnic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            app:errorEnabled="true"
+            app:startIconDrawable="@drawable/ic_email"
+            app:startIconTint="@color/dark_green"
+            android:textColorHint="@color/dark_green"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CNIC"
+                android:inputType="number"
+                android:maxLength="13"
+                android:textColor="@color/dark_green"
+                android:textColorHighlight="@color/dark_green">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tx_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            app:startIconDrawable="@drawable/ic_phone"
+            app:errorEnabled="true"
+            app:startIconTint="@color/dark_green"
+            android:textColorHint="@color/dark_green">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone"
+                android:inputType="number"
+                android:textColor="@color/dark_green"
+                android:textColorHighlight="@color/dark_green">
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tx_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:onClick="showCityPopup"
+            android:textColorHint="@color/dark_green"
+            app:errorEnabled="true"
+            app:startIconDrawable="@drawable/ic_city"
+            app:startIconTint="@color/dark_green">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:onClick="showCityPopup"
+                android:inputType="none"
+                android:focusable="false"
+                android:textColor="@color/dark_green">
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tx_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:textColorHint="@color/dark_green"
+            app:errorEnabled="true"
+            app:startIconDrawable="@drawable/ic_map"
+            app:startIconTint="@color/dark_green">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Address"
+                android:inputType="text"
+                android:textColor="@color/dark_green"
+                android:textColorHighlight="@color/dark_green">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/edit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/dark_green"
+        android:text="SAVE"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
