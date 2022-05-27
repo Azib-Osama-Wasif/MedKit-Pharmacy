@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Common.SelectUserType">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_above="@+id/no_items_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/no_items_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/option"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="Login as"
+        android:textColor="@color/dark_green"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/next"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:text="Not registered?"
+        android:textColor="@color/dark_green"
+        android:textSize="13sp"
+        android:textStyle="" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title2"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="Register"
+        android:textColor="@color/dark_green"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/option"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:textColorHint="@color/dark_green"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxStrokeColor="@color/dark_green"
+        tools:ignore="MissingClass">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_category_input"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_centerVertical="true"
+                android:inputType="none"
+                android:focusable="false"
+
+                android:text="Customer"
+                android:textSize="24sp"
+                android:drawableRight="@drawable/ic_drop_down"
+                android:textStyle="bold"
+                android:onClick="showUserCategories"
+                android:background="@color/light_green"
+                android:textColor="@color/white"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </androidx.cardview.widget.CardView>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/option"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/purple_700"
+        android:textColor="@color/white"
+        android:text="LOGIN" />
+
+
+
+</RelativeLayout>

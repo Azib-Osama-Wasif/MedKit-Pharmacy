@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@color/dark_green">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/receiver_profile_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_launcher_foreground"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="1dp" />
+
+            <TextView
+                android:id="@+id/name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/receiver_profile_image"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Receiver Name"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/email_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_tv"
+                android:layout_alignLeft="@+id/name_tv"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="Receiver Email"
+                android:textColor="#CAC5C5"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:paddingStart="20dp"
+            android:paddingLeft="20dp">
+
+            <TextView
+                android:id="@+id/personal_details_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="8dp"
+                android:text="Account Detail"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/receiver_phone_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/personal_details_title"
+                android:text="Phone Number"
+                android:textColor="@color/dark_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/receiver_phone_tv"
+                android:text="dfdf"
+
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/receiver_cnic_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_phone"
+                android:layout_marginTop="10dp"
+                android:text="Established Since"
+                android:textColor="@color/dark_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_cnic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/receiver_cnic_tv"
+                android:text="03443432423"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/receiver_city_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_cnic"
+                android:layout_marginTop="10dp"
+                android:text="City"
+                android:textColor="@color/dark_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/receiver_city_tv"
+                android:text="Islamabad"
+                android:textSize="16sp" />
+
+
+            <TextView
+                android:id="@+id/receiver_address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_city"
+                android:layout_marginTop="10dp"
+                android:text="Street Address"
+                android:textColor="@color/dark_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/receiver_address_tv"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Sector G-9"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/receiver_email_txt_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_address"
+                android:layout_marginTop="10dp"
+                android:text="Email"
+                android:textColor="@color/dark_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_email_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/receiver_email_txt_tv"
+                android:text="email@gmail.com"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/receiver_password_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_email_2"
+                android:layout_marginTop="10dp"
+                android:text="Password"
+                android:textColor="@color/dark_green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/receiver_password_tv"
+                android:layout_marginBottom="50dp"
+                android:maxLines="2"
+                android:password="true"
+                android:text="Sector G-9"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/change_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/receiver_password_tv"
+                android:layout_alignParentRight="true"
+                android:text="Change Password"
+                android:textColor="@color/dark_green"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/edit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_password"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@color/dark_green"
+                android:backgroundTint="@color/dark_green"
+                android:text="EDIT PROFILE"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

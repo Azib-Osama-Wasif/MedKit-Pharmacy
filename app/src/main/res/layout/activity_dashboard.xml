@@ -1,0 +1,342 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:navigationIcon="@drawable/ic_menu"
+                app:title="Home"
+                android:background="@color/dark_green"
+                app:subtitleTextColor="#0A0A0A"
+                app:titleTextColor="@color/white">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:text="Hello"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/imageView"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginHorizontal="10dp"
+                        android:src="@drawable/ic_launcher_foreground"
+                        app:civ_border_color="@color/dark_green"
+                        app:civ_border_width="2dp" />
+                </RelativeLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="2"
+                    android:columnOrderPreserved="false"
+                    android:rowCount="4">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/pharmacyCard"
+                        android:layout_width="155dp"
+                        android:layout_height="155dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@color/dark_green"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="15dp"
+                            android:src="@drawable/ic_pharmacy" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="5dp"
+
+                            android:gravity="center"
+                            android:text="Pharmacies"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/medicineCard"
+                        android:layout_width="155dp"
+                        android:layout_height="155dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/dark_green"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@color/dark_green"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="15dp"
+                            android:src="@drawable/ic_products" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="5dp"
+
+                            android:gravity="center"
+                            android:text="Medicine"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cartCard"
+                        android:layout_width="155dp"
+                        android:layout_height="155dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@color/dark_green"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="15dp"
+                            android:src="@drawable/ic_cart" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="5dp"
+
+                            android:gravity="center"
+                            android:text="My Cart"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/ordersCard"
+                        android:layout_width="155dp"
+                        android:layout_height="155dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="5dp"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:clickable="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@color/dark_green"
+                            android:gravity="center"
+                            android:orientation="vertical" />
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="15dp"
+                            android:src="@drawable/ic_orders" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="40dp"
+                            android:layout_marginBottom="5dp"
+
+                            android:gravity="center"
+                            android:text="My Orders"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <!--                    <androidx.cardview.widget.CardView-->
+                    <!--                        android:id="@+id/settingsCard"-->
+                    <!--                        android:layout_width="155dp"-->
+                    <!--                        android:layout_height="155dp"-->
+                    <!--                        android:layout_margin="10dp"-->
+                    <!--                        app:cardCornerRadius="12dp"-->
+                    <!--                        app:cardElevation="5dp">-->
+
+                    <!--                        <LinearLayout-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:layout_gravity="center"-->
+                    <!--                            android:background="@color/dark_green"-->
+                    <!--                            android:gravity="center"-->
+                    <!--                            android:orientation="vertical" />-->
+
+                    <!--                        <ImageView-->
+                    <!--                            android:layout_width="80dp"-->
+                    <!--                            android:layout_height="80dp"-->
+                    <!--                            android:layout_gravity="center"-->
+                    <!--                            android:layout_marginBottom="15dp"-->
+                    <!--                            android:src="@drawable/ic_products" />-->
+
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_gravity="center"-->
+                    <!--                            android:layout_marginTop="40dp"-->
+                    <!--                            android:layout_marginBottom="5dp"-->
+
+                    <!--                            android:gravity="center"-->
+                    <!--                            android:text="Settings"-->
+                    <!--                            android:textColor="@color/white"-->
+                    <!--                            android:textSize="16dp" />-->
+
+
+                    <!--                    </androidx.cardview.widget.CardView>-->
+
+                    <!--                    <androidx.cardview.widget.CardView-->
+                    <!--                        android:id="@+id/logoutCard"-->
+                    <!--                        android:layout_width="155dp"-->
+                    <!--                        android:layout_height="155dp"-->
+                    <!--                        android:layout_margin="10dp"-->
+                    <!--                        app:cardCornerRadius="12dp"-->
+                    <!--                        app:cardElevation="5dp">-->
+
+                    <!--                        <LinearLayout-->
+                    <!--                            android:layout_width="match_parent"-->
+                    <!--                            android:layout_height="match_parent"-->
+                    <!--                            android:layout_gravity="center"-->
+                    <!--                            android:background="@color/dark_green"-->
+                    <!--                            android:gravity="center"-->
+                    <!--                            android:orientation="vertical" />-->
+
+                    <!--                        <ImageView-->
+                    <!--                            android:layout_width="80dp"-->
+                    <!--                            android:layout_height="80dp"-->
+                    <!--                            android:layout_gravity="center"-->
+                    <!--                            android:layout_marginBottom="15dp"-->
+                    <!--                            android:src="@drawable/ic_products" />-->
+
+
+                    <!--                        <TextView-->
+                    <!--                            android:layout_width="wrap_content"-->
+                    <!--                            android:layout_height="wrap_content"-->
+                    <!--                            android:layout_gravity="center"-->
+                    <!--                            android:layout_marginTop="40dp"-->
+                    <!--                            android:layout_marginBottom="5dp"-->
+
+                    <!--                            android:gravity="center"-->
+                    <!--                            android:text="Logout"-->
+                    <!--                            android:textColor="@color/white"-->
+                    <!--                            android:textSize="16dp" />-->
+
+
+                    <!--                    </androidx.cardview.widget.CardView>-->
+
+
+                </GridLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/header_layout"
+        app:itemIconTint="@color/dark_green"
+        app:itemTextColor="@color/dark_green"
+        app:menu="@menu/customer_header_menu" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MedKit Pharmacy</string>
+    <string name="type_syrups">Syrups</string>
+    <string name="type_tablets">Tablets</string>
+    <string name="type_capsules">Capsules</string>
+
+    <string name="update_stock"><u>Update Stock</u></string>
+    <string name="add_to_stock"><u>Add to Stock</u></string>
+    <string name="added_to_stock"><u>Added to Stock</u></string>
+</resources>
+

@@ -1,0 +1,249 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.Light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp">
+
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_green"
+            android:focusedByDefault="false"
+            android:focusableInTouchMode="true"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search"
+            android:searchIcon="@drawable/ic_search"
+            android:theme="@style/Theme.TextColorWhite" />
+
+        <TextView
+            android:id="@+id/filtertext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:focusedByDefault="true"
+            android:text="Medicine Type"
+            android:textColor="@color/dark_green"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/itemIcon"
+            android:layout_width="35dp"
+            android:layout_below="@+id/search"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginVertical="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/logo" />
+
+        <RelativeLayout
+            android:id="@+id/radio_buttons"
+            android:layout_below="@+id/filtertext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:checked="true"
+                    android:contentDescription="No Filter Applied"
+                    android:onClick="updateFromRadio"
+                    android:text="All" />
+
+                <RadioButton
+                    android:id="@+id/tablets"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:onClick="updateFromRadio"
+                    android:text="@string/type_tablets" />
+
+                <RadioButton
+                    android:id="@+id/syrups"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="updateFromRadio"
+                    android:text="@string/type_syrups" />
+
+                <RadioButton
+                    android:id="@+id/capsules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="updateFromRadio"
+                    android:text="@string/type_capsules" />
+
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/straight2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/radio_group"
+                android:layout_marginVertical="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/dark_green"
+                android:src="@drawable/straight_line" />
+
+        </RelativeLayout>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progress"
+            style="@style/SpinKitView.Large.FadingCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            app:SpinKit_Color="@color/dark_green" />
+
+        <RelativeLayout
+            android:id="@+id/table_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_green"
+            android:layout_below="@+id/radio_buttons"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/serial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:ellipsize="end"
+                android:maxWidth="150dp"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@+id/serial"
+                android:ellipsize="end"
+                android:maxWidth="150dp"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/name"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_toLeftOf="@+id/available"
+                android:text="Price"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/available"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/name"
+                android:layout_alignParentRight="true"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="25dp"
+                android:text="In Stock"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/price"
+                android:background="@color/white"
+                android:src="@drawable/straight_line" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/items_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/table_header" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="end|bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/dark_green"
+            android:contentDescription="Add New"
+            android:src="@drawable/ic_add_white"
+            android:tooltipText="Request a Store" />
+        <RelativeLayout
+            android:id="@+id/add_rl"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:id="@+id/no_items_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:text="Stock Empty!"
+                android:textColor="@color/dark_green"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/add_btn"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/no_items_title"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_add" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/add_btn"
+                android:layout_centerHorizontal="true"
+                android:text="Tap to add to Stock"
+                android:textColor="@color/dark_green"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

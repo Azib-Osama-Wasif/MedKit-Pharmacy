@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "715183815607",
+    "firebase_url": "https://medkit-pharmacy-default-rtdb.firebaseio.com",
+    "project_id": "medkit-pharmacy",
+    "storage_bucket": "medkit-pharmacy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715183815607:android:049e7ef6fe411a80184632",
+        "android_client_info": {
+          "package_name": "com.fyp22.medkitpharmacy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715183815607-dp25quafl372n1q9auccner7bu8e1djj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxVguiMi5DZYXT46FSu4T9RZM8MkmOmS8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715183815607-dp25quafl372n1q9auccner7bu8e1djj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

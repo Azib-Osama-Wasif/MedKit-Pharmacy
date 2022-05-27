@@ -1,0 +1,111 @@
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Theme.AppCompat.Light"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp">
+
+        <SearchView
+            android:id="@+id/search"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_green"
+            android:iconifiedByDefault="false"
+            android:queryHint="Search"
+            android:searchIcon="@drawable/ic_search"
+            android:theme="@style/Theme.TextColorWhite" />
+
+        <TextView
+            android:id="@+id/city_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/search"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Pharmacies in "
+            android:textSize="18dp"
+            android:visibility="visible" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/search"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/dark_green"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/nearest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="2dp"
+                android:layout_margin="5dp"
+                android:textColor="@color/white"
+                android:text="City Name"
+                android:visibility="visible"
+                android:drawableRight="@drawable/ic_dropdown_small"
+
+                android:onClick="showCityPopup"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/title"
+            android:visibility="invisible"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="No stores in "/>
+
+        <TextView
+            android:id="@+id/show_all"
+            android:visibility="invisible"
+            android:text="Show All Pharmacies"
+            android:textAppearance="@style/Widget.AppCompat.Spinner.Underlined"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/stores_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/city_title"
+            android:layout_marginVertical="10dp" />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/progress"
+            style="@style/SpinKitView.Large.FadingCircle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            app:SpinKit_Color="@color/dark_green" />
+
+
+    </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

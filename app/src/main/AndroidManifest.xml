@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fyp22.medkitpharmacy">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MedKitPharmacy">
+        <activity
+            android:name=".Pharmacy.StockManagement.Add.AddToStock"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Pharmacy.PharmacyMedicineDetailAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Pharmacy.PharmacyDetailAdmin"
+            android:exported="true" />
+        <activity
+            android:name=".Pharmacy.Sales.ViewSales"
+            android:exported="true" />
+        <activity
+            android:name=".Pharmacy.Customers.ViewCustomersPharmacy"
+            android:exported="true" />
+        <activity
+            android:name=".Pharmacy.Medicine.ViewMedicine.ViewMedicinePharmacy"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Admin.Medicine.EditMedicine"
+            android:exported="true" />
+        <activity
+            android:name=".Admin.Medicine.AddMedicine"
+            android:exported="true" />
+        <activity
+            android:name=".Admin.Medicine.MedicineDetailAdmin"
+            android:exported="true" />
+        <activity
+            android:name=".Pharmacy.Medicine.MedicineDetailPharmacy"
+            android:exported="true" />
+        <activity
+            android:name=".Admin.Complaints.ViewComplaints"
+            android:exported="true" />
+        <activity
+            android:name=".Admin.Pharmacy.ViewPharmaciesAdmin"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Admin.Customer.ViewCustomersAdmin"
+            android:exported="true" />
+        <activity
+            android:name=".Admin.Medicine.ViewMedicineAdmin"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Admin.Common.EditProfileAdmin"
+            android:exported="true" />
+        <activity
+            android:name=".Admin.Common.ViewProfileAdmin"
+            android:exported="true" />
+        <activity
+            android:name=".Customer.Common.EditProfile"
+            android:exported="true" />
+        <activity
+            android:name=".Admin.Dashboard.DashboardAdmin"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Customer.Order.OrderDetail"
+            android:exported="true"
+            android:parentActivityName=".Customer.Order.ViewOrders" />
+        <activity
+            android:name=".Pharmacy.Orders.OrderDetailPharmacy"
+            android:exported="true"
+            android:parentActivityName=".Pharmacy.Orders.ViewOrdersPharmacy" />
+        <activity
+            android:name=".Customer.Medicine.MedicineDetail"
+            android:exported="true" />
+        <activity
+            android:name=".Customer.Medicine.ViewMedicine"
+            android:exported="true"
+            android:theme="@style/Theme.FYPDonationAppNoActionBar" />
+        <activity
+            android:name=".Customer.Order.ViewOrders"
+            android:exported="true" />
+        <activity
+            android:name=".Pharmacy.Orders.ViewOrdersPharmacy"
+            android:exported="true" />
+        <activity
+            android:name=".Customer.Common.ViewProfile"
+            android:exported="true" />
+        <activity
+            android:name=".Customer.Cart.CartActivity"
+            android:exported="true"
+            android:parentActivityName=".Pharmacy.Dashboard.DashboardPharmacy" />
+        <activity
+            android:name=".Pharmacy.Common.EditProfilePharmacy"
+            android:exported="true" />
+        <activity
+            android:name=".Pharmacy.Common.ViewProfilePharmacy"
+            android:exported="true" />
+        <activity
+            android:name=".Customer.Pharmacies.PharmacyDetail"
+            android:exported="true" />
+        <activity
+            android:name=".Customer.Pharmacies.ViewPharmacies"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Customer.Dashboard.Dashboard"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Customer.Common.Register"
+            android:exported="true" />
+        <activity
+            android:name=".Common.SelectUserType"
+            android:exported="true" />
+        <activity
+            android:name=".Pharmacy.StockManagement.Select.SelectMedicine"
+            android:exported="true" />
+        <activity
+            android:name=".Pharmacy.Dashboard.DashboardPharmacy"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Pharmacy.Common.RegisterPharmacy"
+            android:exported="true" />
+        <activity
+            android:name=".Common.Login"
+            android:exported="true" />
+        <activity
+            android:name=".Common.SplashScreen"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Common.MainActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>
